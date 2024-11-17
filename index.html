@@ -20,6 +20,7 @@
             background-repeat: no-repeat;
             /* background-size: cover;  Dopasowanie obrazu */
             background-position: center; /* Wyśrodkowanie obrazu */
+			background-color: #003153;
         }
 
         /* Pierwsza sekcja paralaksy */
@@ -43,6 +44,7 @@
                 background-attachment: fixed; /* Wyłączenie paralaksy na mobilnych */
                 background-size: contain; /* Skalowanie obrazu tak, aby był widoczny w całości */
                 background-position: center; /* Wyśrodkowanie obrazu w poziomie, przesunięcie w górę */
+				background-color: #003153;
             }
         }
 
@@ -58,12 +60,34 @@
             padding: 20px;
             border-radius: 10px;
         }
+		
+		.content-box {
+            background-color: #ffffd2; /* Kolor tła prostokąta */
+            color: #333; /* Kolor tekstu */
+            padding: 30px 50px; /* Odstępy wewnętrzne */
+            border-radius: 15px; /* Zaokrąglone rogi */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Cień dla głębi */
+            text-align: center; /* Wyśrodkowanie tekstu */
+            max-width: 600px; /* Maksymalna szerokość prostokąta */
+        }
+		.content-box h1 {
+            margin: 0 0 15px;
+            font-size: 2rem;
+        }
+
+        .content-box p {
+            margin: 0;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
 
         .text-section {
-            padding: 50px 20px;
-            text-align: center;
-            background-color: #f4f4f4;
-            color: #333;
+            position: relative;
+            height: 20vh; /* Wysokość sekcji na pełen ekran */
+            display: flex;
+            justify-content: center; /* Wyśrodkowanie w poziomie */
+            align-items: center; /* Wyśrodkowanie w pionie */
+            background-color: #003153;
         }
     </style>
 </head>
@@ -71,37 +95,37 @@
 
     <!-- Pierwsza sekcja paralaksy -->
     <div class="parallax one">
-        <div class="content">
-            <h1>Witamy!</h1>
-            <p>Efekt paralaksy z responsywnością.</p>
-        </div>
     </div>
 
     <!-- Tekst między sekcjami -->
     <div class="text-section">
-        <h2>O naszej stronie</h2>
-        <p>Przykład responsywnego efektu paralaksy z dostosowaniem do urządzeń mobilnych.</p>
+        <div class="content-box">
+            <h1>Witamy na stronie!</h1>
+            <p>Efekt paralaksy z prostokątem o zaokrąglonych rogach i treścią.</p>
+        </div>
     </div>
 
     <!-- Druga sekcja paralaksy -->
     <div class="parallax two">
-        <div class="content">
-            <h1>Nasze usługi</h1>
-            <p>Profesjonalne projektowanie stron.</p>
-        </div>
     </div>
 
-    <!-- Kolejna sekcja tekstowa -->
+    <!-- Tekst między sekcjami -->
     <div class="text-section">
-        <h2>Dlaczego warto nas wybrać?</h2>
-        <p>Oferujemy unikalne rozwiązania dopasowane do Twoich potrzeb.</p>
+        <div class="content-box">
+            <h1>Witamy na stronie!</h1>
+            <p>Efekt paralaksy z prostokątem o zaokrąglonych rogach i treścią.</p>
+        </div>
     </div>
 
     <!-- Trzecia sekcja paralaksy -->
     <div class="parallax three">
-        <div class="content">
-            <h1>Skontaktuj się z nami</h1>
-            <p>Zapraszamy do współpracy!</p>
+    </div>
+	
+	
+    <div class="text-section">
+        <div class="content-box">
+            <h1>Witamy na stronie!</h1>
+            <p>Efekt paralaksy z prostokątem o zaokrąglonych rogach i treścią.</p>
         </div>
     </div>
 
