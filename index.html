@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efekt Paralaksy z Odsunięciem</title>
+    <style>
+        /* Reset stylów */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Sekcja paralaksy */
+        .parallax {
+            position: relative;
+            height: 80vh; /* Wysokość sekcji */
+            background-attachment: fixed; /* Efekt paralaksy */
+			background-color: gray;
+            background-repeat: no-repeat;
+			
+            background-size: 80%; /* Pomniejszenie obrazu */
+            background-position: center 20%; /* Przesunięcie obrazu (center = środek w poziomie, 20% = w dół) */
+        }
+
+        /* Tło z efektem */
+        .parallax.first {
+            background-image: url('IMG_20240910_140912655_HDR.jpg');
+        }
+
+        .parallax.second {
+            background-image: url('IMG_20240908_132517895_HDR.jpg');
+        }
+
+        .parallax.third {
+            background-image: url('https://via.placeholder.com/1920x1080/2980B9/FFFFFF');
+        }
+
+        /* Treść sekcji */
+        .content {
+            position: absolute;
+            top: 90%;
+            left: 60%;
+            transform: translate(-70%, -70%);
+            color: white;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        /* Sekcja tekstowa */
+        .text-section {
+            padding: 30px 20px;
+            text-align: center;
+            background-color: gray;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Pierwsza sekcja paralaksy -->
+    <div class="parallax first">
+        <div class="content">
+            <h1>Witamy na stronie</h1>
+            <p>Efekt paralaksy z odsunięciem i pomniejszeniem obrazu</p>
+        </div>
+    </div>
+
+    <!-- Sekcja tekstowa -->
+    <div class="text-section">
+        <h2>O naszej stronie</h2>
+        <p>Przykład efektu paralaksy z wyśrodkowaniem i skalowaniem tła.</p>
+    </div>
+
+    <!-- Druga sekcja paralaksy -->
+    <div class="parallax second">
+        <div class="content">
+            <h1>Nasze usługi</h1>
+            <p>Profesjonalne projektowanie i rozwój stron internetowych</p>
+        </div>
+    </div>
+
+    <!-- Kolejna sekcja tekstowa -->
+    <div class="text-section">
+        <h2>Dlaczego my?</h2>
+        <p>Zapewniamy unikalne projekty dostosowane do Twoich potrzeb.</p>
+    </div>
+
+    <!-- Trzecia sekcja paralaksy -->
+    <div class="parallax third">
+        <div class="content">
+            <h1>Skontaktuj się z nami</h1>
+            <p>Gotowi na współpracę? Skontaktuj się już dziś!</p>
+        </div>
+    </div>
+
+</body>
+</html>
