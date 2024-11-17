@@ -4,18 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Efekt Paralaksy - Responsywność</title>
+	
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
     <style>
         /* Reset stylów */
         body, html {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Pacifico', cursive;
         }
 
         /* Globalne ustawienia dla sekcji paralaksy */
         .parallax {
             position: relative;
-            height: 80vh; /* Pełen ekran */
+            height: 70vh; /* Pełen ekran */
             background-attachment: fixed; /* Efekt paralaksy */
             background-repeat: no-repeat;
             /* background-size: cover;  Dopasowanie obrazu */
@@ -46,6 +49,10 @@
                 background-position: center; /* Wyśrodkowanie obrazu w poziomie, przesunięcie w górę */
 				background-color: #003153;
             }
+			.content-box {
+                padding: 5px; /* Mniejszy padding na urządzeniach mobilnych */
+                font-size: 0.9rem; /* Zmniejszony rozmiar tekstu */
+            }
         }
 
         /* Sekcja tekstowa */
@@ -62,19 +69,19 @@
         }
 		
 		.content-box {
-            background-color: #ffffd2; /* Kolor tła prostokąta */
+            background-color: #ffffff; /* Kolor tła prostokąta */
             color: #333; /* Kolor tekstu */
-            padding: 30px 50px; /* Odstępy wewnętrzne */
+            padding: 10px 50px; /* Odstępy wewnętrzne */
             border-radius: 15px; /* Zaokrąglone rogi */
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Cień dla głębi */
+			width: calc(100% - 5px); /* Szerokość na prawie całą stronę z marginesem */
             text-align: center; /* Wyśrodkowanie tekstu */
-            max-width: 600px; /* Maksymalna szerokość prostokąta */
+            /*max-width: 1200px;  Maksymalna szerokość prostokąta */
         }
 		.content-box h1 {
             margin: 0 0 15px;
             font-size: 2rem;
         }
-
         .content-box p {
             margin: 0;
             font-size: 1rem;
@@ -83,7 +90,8 @@
 
         .text-section {
             position: relative;
-            height: 20vh; /* Wysokość sekcji na pełen ekran */
+            /* height: 25vh;  Wysokość sekcji na pełen ekran */
+			padding: 20px 10px; /* Odstępy wewnętrzne */
             display: flex;
             justify-content: center; /* Wyśrodkowanie w poziomie */
             align-items: center; /* Wyśrodkowanie w pionie */
@@ -100,8 +108,8 @@
     <!-- Tekst między sekcjami -->
     <div class="text-section">
         <div class="content-box">
-            <h1>Witamy na stronie!</h1>
-            <p>Efekt paralaksy z prostokątem o zaokrąglonych rogach i treścią.</p>
+            <h1>Dziękujemy, że jesteście z Nami</h1>
+            <h1>w dniu Naszego Ślubu.</h1>
         </div>
     </div>
 
