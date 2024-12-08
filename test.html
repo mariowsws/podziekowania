@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paralaksa z dwoma zdjęciami</title>
+    <style>
+        /* Reset stylów */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Globalne ustawienia paralaksy */
+        .parallax {
+            position: relative;
+            height: 100vh; /* Pełna wysokość ekranu */
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .parallax.one {
+            background-image: url('https://via.placeholder.com/1920x1080');
+        }
+
+        .parallax.two {
+            background-image: url('https://via.placeholder.com/1920x1080/333');
+        }
+
+        /* Sekcja z obrazami obok siebie */
+        .image-section {
+            display: flex;
+            justify-content: center; /* Wyśrodkowanie obrazów */
+            align-items: center;
+            gap: 20px; /* Odstęp między obrazami */
+            padding: 50px 20px; /* Odstęp wewnętrzny sekcji */
+            background: #f4f4f4; /* Kolor tła */
+        }
+
+        /* Stylizacja obrazów */
+        .image-section img {
+            width: calc(50% - 10px); /* Każdy obraz zajmuje połowę szerokości sekcji */
+            max-width: 500px; /* Maksymalna szerokość obrazu */
+            height: auto; /* Zachowanie proporcji obrazu */
+            border-radius: 10px; /* Zaokrąglone rogi */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Cień */
+        }
+
+        /* Responsywność */
+        @media (max-width: 768px) {
+            .image-section {
+                flex-direction: column; /* Obrazy pod sobą na małych ekranach */
+            }
+
+            .image-section img {
+                width: 80%; /* Obrazy zajmują większą część szerokości */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Pierwsza sekcja paralaksy -->
+    <div class="parallax one"></div>
+
+    <!-- Sekcja z obrazami -->
+    <div class="image-section">
+        <img src="https://via.placeholder.com/600x400" alt="Zdjęcie 1">
+        <img src="https://via.placeholder.com/600x400/333" alt="Zdjęcie 2">
+    </div>
+
+    <!-- Druga sekcja paralaksy -->
+    <div class="parallax two"></div>
+
+</body>
+</html>

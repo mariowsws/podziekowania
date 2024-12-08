@@ -17,28 +17,48 @@
 
         /* Globalne ustawienia dla sekcji paralaksy */
         .parallax {
+			display: flex;
             position: relative;
             height: 100vh; /* Pełen ekran */
+			align-items: center; /* Wyrównanie w pionie */
+            
             background-attachment: fixed; /* Efekt paralaksy */
             background-repeat: no-repeat;
             background-size: contain;  /* Dopasowanie obrazu */
             background-position: center 20% ; /* Wyśrodkowanie obrazu */
 			background-color: #003153;
         }
+		
+		
+		/* Styl obrazów */
+        .image {
+            flex: 1; /* Każdy obraz zajmuje równą szerokość */
+            height: 100vh; /* Pełen ekran */
+			align-items: center; /* Wyrównanie w pionie */
+            /* max-width: 400px;  Maksymalna szerokość każdego obrazu */
+            background-size: contain; /* Dopasowanie do proporcji obrazu */
+            background-position: center; /* Wyśrodkowanie obrazu */
+            background-repeat: no-repeat; /* Nie powtarzaj obrazów */
+            border-radius: 20px; /* Zaokrąglone rogi */
+          
+        }
 
         /* Pierwsza sekcja paralaksy */
         .parallax.jeden {
-            background-image: url('Zdjecie1a.jpg');
+            background-image: url('Zdjeciepierwsze.jpg');
         }
 
         /* Druga sekcja paralaksy */
-        .parallax.dwa {
+        .image.dwaa {
             background-image: url('Zdjecie2a.jpg');
         }
-
+		/* Druga sekcja paralaksy */
+        .image.dwab {
+            background-image: url('Zdjecie2b.jpg');
+        }
         /* Trzecia sekcja paralaksy */
         .parallax.trzy {
-            background-image: url('Zdjecie1a.jpg');
+            background-image: url('Zdjecie3a.jpg');
         }
 		/* Czwarta sekcja paralaksy */
         .parallax.cztery {
@@ -66,11 +86,11 @@
         }
 		/* Dziesiąta sekcja paralaksy */
         .parallax.dziesiec {
-            background-image: url('https://via.placeholder.com/1920x1080/2980B9/FFFFFF');
+            background-image: url('Zdjęcie10g.jpg');
         }
 		/* Jedenasta sekcja paralaksy */
         .parallax.jedenascie {
-            background-image: url('https://via.placeholder.com/1920x1080/2980B9/FFFFFF');
+            background-image: url('Zdjęcie11f.jpg');
         }
         /* Media Queries dla urządzeń mobilnych */
         @media (max-width: 768px) {
@@ -84,6 +104,13 @@
 			.content-box {
                 padding: 5px; /* Mniejszy padding na urządzeniach mobilnych */
                 font-size: 0.9rem; /* Zmniejszony rozmiar tekstu */
+            }
+			.image-section {
+                flex-direction: column; /* Obrazy pod sobą na małych ekranach */
+            }
+
+            .image-section img {
+                width: 80%; /* Obrazy zajmują większą część szerokości */
             }
         }
 
@@ -135,7 +162,10 @@
 
     <!-- Pierwsza sekcja paralaksy -->
     <div class="parallax jeden">
+	
     </div>
+	
+	
 
     <!-- Tekst między sekcjami -->
     <div class="text-section">
@@ -146,7 +176,9 @@
     </div>
 
     <!-- Druga sekcja paralaksy -->
-    <div class="parallax dwa">
+    <div class="parallax">
+		<div class="image dwaa"></div>
+        <div class="image dwab"></div>
     </div>
 
     <!-- Tekst między sekcjami -->
@@ -156,14 +188,14 @@
         </div>
     </div>
 
-    <!-- Trzecia sekcja paralaksy -->
     <div class="parallax trzy">
+	
     </div>
 	
 	
     <div class="text-section">
         <div class="content-box">
-            <h1>To dlatego postanowiliśmy, że w tym dniu podzielimy się nią właśnie z Wa</h1>
+            <h1>To dlatego postanowiliśmy, że w tym dniu podzielimy się nią właśnie z Wami</h1>
         </div>
     </div>
 
