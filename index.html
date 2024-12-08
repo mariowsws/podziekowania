@@ -19,9 +19,7 @@
         .parallax {
 			display: flex;
             position: relative;
-            height: 100vh; /* Pełen ekran */
-			align-items: center; /* Wyrównanie w pionie */
-            
+            height: 100vh; /* Pełen ekran */      
             background-attachment: fixed; /* Efekt paralaksy */
             background-repeat: no-repeat;
             background-size: contain;  /* Dopasowanie obrazu */
@@ -43,52 +41,59 @@
           
         }
 
-        /* Pierwsza sekcja paralaksy */
+       
         .parallax.jeden {
-            background-image: url('Zdjeciepierwsze.jpg');
+            background-image: url('1.jpg');
         }
 
-        /* Druga sekcja paralaksy */
+        
         .image.dwaa {
-            background-image: url('Zdjecie2a.jpg');
+            background-image: url('2a.jpg');
         }
-		/* Druga sekcja paralaksy */
+		
         .image.dwab {
-            background-image: url('Zdjecie2b.jpg');
+            background-image: url('2b.jpg');
         }
-        /* Trzecia sekcja paralaksy */
+        
         .parallax.trzy {
-            background-image: url('Zdjecie3a.jpg');
+            background-image: url('3.jpg');
         }
-		/* Czwarta sekcja paralaksy */
-        .parallax.cztery {
-            background-image: url('Zdjęcie4.jpg');
+		
+        .image.czterya {
+            background-image: url('4a.jpg');
         }
-		/* Piąta sekcja paralaksy */
+		
+        .image.czteryb {
+            background-image: url('4b.jpg');
+        }	
+		
         .parallax.piec {
-            background-image: url('Zdjęcie5a.jpg');
+            background-image: url('5.jpg');
         }
-		/* Szósta sekcja paralaksy */
+		
         .parallax.szesc {
             background-image: url('Zdjęcie6a.jpg');
         }
-		/* Siódma sekcja paralaksy */
-        .parallax.siedem {
-            background-image: url('Zdjęcie7a.jpg');
+		
+        .image.siedema {
+            background-image: url('7a.jpg');
         }
-		/* Ósma sekcja paralaksy */
+		
+        .image.siedemb {
+            background-image: url('7b.jpg');
+        }
         .parallax.osiem {
             background-image: url('Zdjęcie8a.jpg');
         }
-		/* Dziewiąta sekcja paralaksy */
+
         .parallax.dziewiec {
-            background-image: url('Zdjęcie9a.jpg');
+            background-image: url('9.jpg');
         }
-		/* Dziesiąta sekcja paralaksy */
+
         .parallax.dziesiec {
             background-image: url('Zdjęcie10g.jpg');
         }
-		/* Jedenasta sekcja paralaksy */
+	
         .parallax.jedenascie {
             background-image: url('Zdjęcie11f.jpg');
         }
@@ -99,14 +104,13 @@
                 background-size: contain; /* Skalowanie obrazu tak, aby był widoczny w całości */
 				height: 60vh; /* Pełen ekran */
                 background-position: center 20%; /* Wyśrodkowanie obrazu w poziomie, przesunięcie w górę */
-		flex-direction: column; /* Obrazy pod sobą na małych ekranach */    
 				background-color: #003153;
             }
 			.content-box {
                 padding: 5px; /* Mniejszy padding na urządzeniach mobilnych */
                 font-size: 0.9rem; /* Zmniejszony rozmiar tekstu */
             }
-			.image {
+			.image-section {
                 flex-direction: column; /* Obrazy pod sobą na małych ekranach */
             }
 
@@ -157,6 +161,147 @@
             align-items: center; /* Wyśrodkowanie w pionie */
             background-color: #003153;
         }
+/* Przenikanie zdjęć */
+.fade-section {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: black;
+            overflow: hidden;
+        }
+
+        .fade-images {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .fade-images div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0;
+            
+        }
+
+        .fade-images.two div {
+            animation: fadeAnimation2 12s infinite;
+        }
+
+        
+        
+
+        /* Przenikanie dla pierwszej sekcji */
+        .fade-section.one .fade-images.two div:nth-child(1) {
+            background-image: url('6a.jpg');
+            animation-delay: 0s;
+            
+        }
+        .fade-section.one .fade-images.two div:nth-child(2) {
+            background-image: url('6b.jpg');
+            animation-delay: 6s;
+        }
+
+        
+
+        /* Przenikanie dla drugiej sekcji */
+        .fade-section.two .fade-images.two div:nth-child(1) {
+            background-image: url('8a.jpg');
+            animation-delay: 0s;
+        }
+
+        .fade-section.two .fade-images.two div:nth-child(2) {
+            background-image: url('8b.jpg');
+            animation-delay: 6s;
+        }
+
+        .fade-images.four div {
+            animation: fadeAnimation4 20s infinite;
+        }
+
+        /* Przenikanie dla drugiej ola */
+        .fade-section.three .fade-images.four div:nth-child(1) {
+            background-image: url('11.jpg');
+            animation-delay: 0s;
+        }
+
+        .fade-section.three .fade-images.four div:nth-child(2) {
+            background-image: url('12.jpg');
+            animation-delay: 5s;
+        }
+
+        .fade-section.three .fade-images.four div:nth-child(3) {
+            background-image: url('13.jpg');
+            animation-delay: 10s;
+        }
+
+        .fade-section.three .fade-images.four div:nth-child(4) {
+            background-image: url('14.jpg');
+            animation-delay: 15s;
+        }
+
+
+        /* Przenikanie dla drugiej mariusz */
+        .fade-section.four .fade-images.four div:nth-child(1) {
+            background-image: url('21.jpg');
+            animation-delay: 0s;
+        }
+
+        .fade-section.four .fade-images.four div:nth-child(2) {
+            background-image: url('22.jpg');
+            animation-delay: 5s;
+        }
+
+        .fade-section.four .fade-images.four div:nth-child(3) {
+            background-image: url('23.jpg');
+            animation-delay: 10s;
+        }
+
+        .fade-section.four .fade-images.four div:nth-child(4) {
+            background-image: url('24.jpg');
+            animation-delay: 15s;
+        }
+        
+
+        /* Animacja przenikania */
+        @keyframes fadeAnimation4 {
+            0%, 25% {
+                opacity: 0;
+            }
+            25%, 50% {
+                opacity: 1;
+            }
+            50%, 75% {
+                opacity: 0;
+            }
+            75%, 100% {
+                opacity: 0;
+            }
+        }
+
+        /* Animacja przenikania */
+        @keyframes fadeAnimation2 {
+            0%, 33% {
+                opacity: 0;
+            }
+            33%, 66% {
+                opacity: 1;
+            }
+            66%, 100% {
+                opacity: 0;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -201,7 +346,9 @@
     </div>
 
  <!-- Czwarta sekcja paralaksy -->
-    <div class="parallax cztery">
+    <div class="parallax">
+	<div class="image czterya"></div>
+        <div class="image czteryb"></div>
     </div>
 
     <!-- Tekst między sekcjami -->
@@ -223,8 +370,13 @@
             
         </div>
     </div>
- <!-- Szósta sekcja paralaksy -->
-    <div class="parallax szesc">
+<!-- Sekcja szesc Przenikanie zdjęć -->
+    <div class="fade-section one">
+        
+        <div class="fade-images two">
+            <div></div>
+            <div></div>
+        </div>
     </div>
 
     <!-- Tekst między sekcjami -->
@@ -237,7 +389,9 @@
     </div>
 
  <!-- Siódma sekcja paralaksy -->
-    <div class="parallax siedem">
+    <div class="parallax">
+	<div class="image siedema"></div>
+        <div class="image siedemb"></div>
     </div>
 
     <!-- Tekst między sekcjami -->
@@ -248,9 +402,14 @@
         </div>
     </div>
 
- <!-- Ósma sekcja paralaksy -->
-    <div class="parallax osiem">
+ <!-- Sekcja osma Przenikanie zdjęć -->
+ <div class="fade-section two">
+        
+    <div class="fade-images two">
+        <div></div>
+        <div></div>
     </div>
+</div>
 
     <!-- Tekst między sekcjami -->
     <div class="text-section">
@@ -271,9 +430,16 @@
         </div>
     </div>
 	
-<!-- Dziesiąta sekcja paralaksy -->
-    <div class="parallax dziesiec">
+<!-- Sekcja ola Przenikanie zdjęć -->
+<div class="fade-section three">
+        
+    <div class="fade-images four">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
     </div>
+</div>
 
     <!-- Tekst między sekcjami -->
     <div class="text-section">
@@ -283,9 +449,17 @@
         </div>
     </div>
 	
-<!-- Jedenasta sekcja paralaksy -->
-    <div class="parallax jedenascie">
+<!-- Sekcja mariusz Przenikanie zdjęć -->
+<div class="fade-section four">
+        
+    <div class="fade-images four">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
     </div>
+</div>
+
 
     <!-- Tekst między sekcjami -->
     <div class="text-section">
