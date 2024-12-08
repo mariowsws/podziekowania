@@ -31,7 +31,7 @@
 		/* Styl obrazów */
         .image {
             flex: 1; /* Każdy obraz zajmuje równą szerokość */
-            height: 100vh; /* Pełen ekran */
+            height: 90vh; /* Pełen ekran */
 			align-items: center; /* Wyrównanie w pionie */
             /* max-width: 400px;  Maksymalna szerokość każdego obrazu */
             background-size: contain; /* Dopasowanie do proporcji obrazu */
@@ -110,7 +110,13 @@
                 padding: 5px; /* Mniejszy padding na urządzeniach mobilnych */
                 font-size: 0.9rem; /* Zmniejszony rozmiar tekstu */
             }
-			
+			.image {
+                background-attachment: fixed;
+                background-size: contain; /* Skalowanie obrazu tak, aby był widoczny w całości */
+				height: 60vh; /* Pełen ekran */
+                background-position: center 40%; /* Wyśrodkowanie obrazu w poziomie, przesunięcie w górę */
+
+            }
         }
 
         /* Sekcja tekstowa */
