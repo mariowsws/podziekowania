@@ -19,7 +19,7 @@
         .parallax {
 			display: flex;
             position: relative;
-            height: 100vh; /* Pełen ekran */      
+            height: 90vh; /* Pełen ekran */      
             background-attachment: fixed; /* Efekt paralaksy */
             background-repeat: no-repeat;
             background-size: contain;  /* Dopasowanie obrazu */
@@ -31,7 +31,7 @@
 		/* Styl obrazów */
         .image {
             flex: 1; /* Każdy obraz zajmuje równą szerokość */
-            height: 100vh; /* Pełen ekran */
+            height: 90vh; /* Pełen ekran */
 			align-items: center; /* Wyrównanie w pionie */
             /* max-width: 400px;  Maksymalna szerokość każdego obrazu */
             background-size: contain; /* Dopasowanie do proporcji obrazu */
@@ -112,6 +112,7 @@
             }
             .image {
                 background-attachment: fixed; /* Wyłączenie paralaksy na mobilnych */
+                flex: 1;
             }
 			
         }
